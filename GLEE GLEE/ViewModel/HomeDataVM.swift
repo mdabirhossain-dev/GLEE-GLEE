@@ -39,6 +39,15 @@ class HomeDataVM: ObservableObject {
         ],
         categories: [
             
+        ], editorsChoice: [
+            EditorsChoice(id: 0, title: "Rishtqa", thumbnail: "rishta", backgroundImage: "", duration: 2, totalView: "2.5M"),
+            EditorsChoice(id: 1, title: "Ontojal", thumbnail: "ontojal", backgroundImage: "", duration: 2, totalView: "1.5M"),
+            EditorsChoice(id: 2, title: "Rishta", thumbnail: "rishta", backgroundImage: "", duration: 2, totalView: "3M"),
+            EditorsChoice(id: 3, title: "Ural Prem", thumbnail: "ural_prem", backgroundImage: "", duration: 2, totalView: "2.5M"),
+            EditorsChoice(id: 4, title: "Dirilis", thumbnail: "dirilis", backgroundImage: "", duration: 2, totalView: "4.5M"),
+            EditorsChoice(id: 5, title: "Ontojal", thumbnail: "ontojal", backgroundImage: "", duration: 2, totalView: "5M"),
+            EditorsChoice(id: 6, title: "Rishta", thumbnail: "rishta", backgroundImage: "", duration: 2, totalView: "2.5M"),
+            EditorsChoice(id: 7, title: "Ural Prem", thumbnail: "ural_prem", backgroundImage: "", duration: 2, totalView: "7M")
         ],
         tidBits: [
             
@@ -47,5 +56,7 @@ class HomeDataVM: ObservableObject {
             
         ]
     )
+    @Published var isPresentPlayer = false
+    @Published var videoURL = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     
 }

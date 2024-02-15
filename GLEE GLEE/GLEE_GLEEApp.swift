@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct GLEE_GLEEApp: App {
+    // MARK: - Properties
+    @StateObject var homeDataVM = HomeDataVM()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabItemsView()
+                .environmentObject(homeDataVM)
         }
     }
 }

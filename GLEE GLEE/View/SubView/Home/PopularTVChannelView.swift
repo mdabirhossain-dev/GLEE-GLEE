@@ -9,20 +9,28 @@ import SwiftUI
 
 struct PopularTVChannelView: View {
     // MARK: - Properties
+    @EnvironmentObject var homeDataVM: HomeDataVM
+    
+//    var action: () -> Void
+    
     let popularVTChannels: [PopularTVChannel]
     let size: CGSize
     
     var body: some View {
         Text("Popular TV Channels")
-            .foregroundColor(Color.gray)
             .bold()
+            .padding(.leading, 5)
+            .foregroundColor(Color.gray)
             .frame(maxWidth: .infinity, alignment: .leading)
         
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: [GridItem(.flexible())], spacing: 15) {
                 ForEach(0..<popularVTChannels.count, id: \.self) { index in
                     Button {
-                        
+//                        action()
+                        withAnimation {
+                            homeDataVM.isPresentPlayer = true
+                        }
                     } label: {
                         Image(popularVTChannels[index].thumbnail)
                             .resizable()
