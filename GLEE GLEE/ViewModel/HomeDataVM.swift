@@ -19,6 +19,22 @@ class HomeDataVM: ObservableObject {
             Carosel(id: 2, title: "", thumbnail: "rishta", backgroundImage: ""),
             Carosel(id: 3, title: "", thumbnail: "ural_prem", backgroundImage: ""),
         ],
+//        popularTVChannel: [
+//            PopularTVChannel(id: 0, title: "", thumbnail: "Bijoy-TV_110x110", backgroundImage: ""),
+//            PopularTVChannel(id: 1, title: "", thumbnail: "Channel-24_110x110", backgroundImage: ""),
+//            PopularTVChannel(id: 2, title: "", thumbnail: "CHANNEL-I-HD_110x110", backgroundImage: ""),
+//            PopularTVChannel(id: 3, title: "", thumbnail: "Desh-TV_110x110", backgroundImage: ""),
+//            PopularTVChannel(id: 4, title: "", thumbnail: "Ekattor-HD_110x110", backgroundImage: ""),
+//            PopularTVChannel(id: 5, title: "", thumbnail: "Independent-TV_110x110", backgroundImage: ""),
+//            PopularTVChannel(id: 6, title: "", thumbnail: "my-tv-HD_110x110", backgroundImage: ""),
+//            PopularTVChannel(id: 7, title: "", thumbnail: "NTV_110x110", backgroundImage: ""),
+//            PopularTVChannel(id: 0, title: "", thumbnail: "RTV-HD_110x110", backgroundImage: ""),
+//            PopularTVChannel(id: 1, title: "", thumbnail: "Somoy-News_110x110", backgroundImage: ""),
+//            PopularTVChannel(id: 2, title: "", thumbnail: "Sony Ten 1 1", backgroundImage: ""),
+//            PopularTVChannel(id: 3, title: "", thumbnail: "Sony Ten 2 1", backgroundImage: ""),
+//            PopularTVChannel(id: 4, title: "", thumbnail: "Sony Ten 3 1", backgroundImage: ""),
+//            PopularTVChannel(id: 5, title: "", thumbnail: "Sony Ten 5 1", backgroundImage: "")
+//        ],
         popularTVChannel: [
             PopularTVChannel(id: 0, title: "", thumbnail: "euro_sports", backgroundImage: ""),
             PopularTVChannel(id: 1, title: "", thumbnail: "nick", backgroundImage: ""),
@@ -39,7 +55,8 @@ class HomeDataVM: ObservableObject {
         ],
         categories: [
             
-        ], editorsChoice: [
+        ],
+        editorsChoice: [
             EditorsChoice(id: 0, title: "Rishtqa", thumbnail: "rishta", backgroundImage: "", duration: 2, totalView: "2.5M"),
             EditorsChoice(id: 1, title: "Ontojal", thumbnail: "ontojal", backgroundImage: "", duration: 2, totalView: "1.5M"),
             EditorsChoice(id: 2, title: "Rishta", thumbnail: "rishta", backgroundImage: "", duration: 2, totalView: "3M"),
@@ -54,6 +71,18 @@ class HomeDataVM: ObservableObject {
         ],
         trendingChannels: [
             
+        ],
+        recentlyAdded: [
+            
+        ],
+        movies: [
+            Movie(id: 0, title: "", thumbnail: "antim", backgroundImage: ""),
+            Movie(id: 0, title: "", thumbnail: "beiman_pitega", backgroundImage: ""),
+            Movie(id: 0, title: "", thumbnail: "choori", backgroundImage: ""),
+            Movie(id: 0, title: "", thumbnail: "dugdugi", backgroundImage: ""),
+            Movie(id: 0, title: "", thumbnail: "happy_ending", backgroundImage: ""),
+            Movie(id: 0, title: "", thumbnail: "matrix", backgroundImage: ""),
+            Movie(id: 0, title: "", thumbnail: "morbius", backgroundImage: "")
         ]
     )
     @Published var isPresentPlayer = false

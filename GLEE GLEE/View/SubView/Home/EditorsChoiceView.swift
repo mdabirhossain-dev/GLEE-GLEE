@@ -15,14 +15,20 @@ struct EditorsChoiceView: View {
     @State private var isNavigate = false
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            Text("Editors Choice")
-                .bold()
-                .padding(.leading, 10)
-                .foregroundColor(Color.gray)
-                .frame(maxWidth: .infinity, alignment: .leading)
+//        ScrollView(.vertical, showsIndicators: false) {
+//            Text("Editors Choice")
+//                .bold()
+//                .padding(.leading, 10)
+//                .foregroundColor(Color.gray)
+//                .frame(maxWidth: .infinity, alignment: .leading)
             
-            LazyVStack {
+            LazyVStack(spacing: 5) {
+                Text("Editors Choice")
+                    .bold()
+                    .padding(.leading, 10)
+                    .foregroundColor(Color.gray)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
                 ForEach(0..<editorsChoices.count, id: \.self) { index in
                     Button {
 //                        homeDataVM.isPresentPlayer = true
@@ -36,7 +42,7 @@ struct EditorsChoiceView: View {
 //                    }
                 }
             }
-        }
+//        }
         .padding(.vertical)
         .background(Color(red: 58/255, green: 80/255, blue: 115/255).opacity(0.8))
         .cornerRadius(20)
@@ -70,24 +76,31 @@ struct EditorsChoiceCellView: View {
                 
 //                Spacer()
                 
-                VStack(alignment: .trailing) {
-                    Text(editorsChoice.title)
-                        .bold()
+                HStack {
                     
-                    HStack {
-                        Image("toffee")
-                            .resizable()
-                            .frame(width: 40, height: 40)
-                            .aspectRatio(contentMode: .fill)
+                    Spacer()
+                    
+                    VStack(alignment: .trailing) {
+                        Text(editorsChoice.title)
+                            .bold()
                         
-                        Text("Toffee")
+                        HStack {
+                            Image("toffee")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .aspectRatio(contentMode: .fill)
+                                .clipShape(Circle())
+                            
+                            Text("Toffee")
+                        }
+                        
+                        Text("3.4M Views・1m")
+                            .font(.system(size: 12, weight: .semibold))
                     }
-                    
-                    Text("3.4M Views・1m")
-                        .font(.system(size: 12, weight: .semibold))
+                    .foregroundColor(Color.white)
+                    .frame(maxWidth: size.width / 2, maxHeight: 0.25 * size.height, alignment: .trailing)
+                    .padding(.trailing, 5)
                 }
-                .foregroundColor(Color.white)
-                .frame(maxWidth: size.width / 2, maxHeight: 0.25 * size.height)
             }
         } else {
             HStack(spacing: 0) {
@@ -100,6 +113,7 @@ struct EditorsChoiceCellView: View {
                             .resizable()
                             .frame(width: 40, height: 40)
                             .aspectRatio(contentMode: .fill)
+                            .clipShape(Circle())
                         
                         Text("Toffee")
                     }
@@ -108,9 +122,8 @@ struct EditorsChoiceCellView: View {
                         .font(.system(size: 12, weight: .semibold))
                 }
                 .foregroundColor(Color.white)
-                .frame(maxWidth: size.width / 2, maxHeight: 0.25 * size.height)
-                
-//                Spacer()
+                .frame(maxWidth: size.width / 2, maxHeight: 0.25 * size.height, alignment: .leading)
+                .padding(.leading, 5)
                 
                 Image(editorsChoice.thumbnail)
                     .resizable()

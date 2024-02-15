@@ -52,8 +52,9 @@ struct TabItemsView: View {
         }
         .fullScreenCover(isPresented: $homeDataVM.isPresentPlayer) {
             VStack {
-                let pri = print("pri \(UIDevice.current.orientation)")
-                let pri1 = print("pri2 \(deviceOrientation)")
+                let pri = print("OrientationValue: \(UIDevice.current.orientation.rawValue)")
+                let pri1 = print("isLandscape: \(deviceOrientation.isLandscape)")
+                
 //                #if os(iOS)
                 if UIDevice.current.isIPhone && deviceOrientation.rawValue == 0 || deviceOrientation.rawValue == 1 {
                     Button {

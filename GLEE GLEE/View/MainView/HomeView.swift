@@ -30,6 +30,8 @@ struct HomeView: View {
                     
                     PopularTVChannelView(popularVTChannels: homeDataVM.homeData.popularTVChannel, size: size)
                     
+                    MoviesView(movies: homeDataVM.homeData.movies, size: size)
+                    
                     CategoriesView(categories: homeDataVM.homeData.categories)
                     
                     EditorsChoiceView(editorsChoices: homeDataVM.homeData.editorsChoice)

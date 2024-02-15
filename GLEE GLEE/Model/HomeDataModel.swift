@@ -15,6 +15,8 @@ struct HomeDataModel {
     let editorsChoice: [EditorsChoice]
     let tidBits: [TidBits]
     let trendingChannels: [TrendingChannels]
+    let recentlyAdded: [RecentlyAdded]
+    let movies: [Movie]
 }
 
 struct Carosel {
@@ -60,3 +62,24 @@ struct TrendingChannels {
     let thumbnail: String
     let backgroundImage: String
 }
+
+struct RecentlyAdded {
+    var id: Int
+    let title: String
+    let thumbnail: String
+    let backgroundImage: String
+}
+
+struct Movie {
+    var id: Int
+    let title: String
+    let thumbnail: String
+    let backgroundImage: String
+}
+
+
+// recently Added
+// Recommended for You
+// Top Movies
+// Bollywood Movies
+// Hollywood Movies
