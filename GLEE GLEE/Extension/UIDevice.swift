@@ -1,8 +1,8 @@
 //
 //  UIDevice.swift
-//  Multiplatform Stream
+//  GLEE GLEE
 //
-//  Created by Md Abir Hossain on 13/2/24.
+//  Created by Md Abir Hossain on 14/2/24.
 //
 
 import Foundation
@@ -22,7 +22,11 @@ extension UIDevice {
         UIDevice.current.userInterfaceIdiom == .tv
     }
     
-    var hasNotch: Bool {
+    var isLandscape: Bool {
+        UIDevice.current.orientation.isLandscape
+    }
+    
+    var haveNotch: Bool {
         let bottom = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
                 return bottom > 0
      }

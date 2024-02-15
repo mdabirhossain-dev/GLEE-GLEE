@@ -11,6 +11,9 @@ struct TabItemsView: View {
     // MARK: - Propoerties
     @EnvironmentObject var homeDataVM: HomeDataVM
     
+    // Device orientation
+    @State private var deviceOrientation = UIDevice.current.orientation
+    
     var body: some View {
         TabView {
             HomeView()
@@ -39,11 +42,20 @@ struct TabItemsView: View {
                     Label("My Channel", systemImage: "person.crop.square")
                 }
         }
+        .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
+            if UIDevice.current.orientation.isLandscape {
+                self.deviceOrientation = UIDevice.current.orientation
+            } else {
+                self.deviceOrientation = UIDevice.current.orientation
+            }
+            print("Device oR: \(deviceOrientation.rawValue)")
+        }
         .fullScreenCover(isPresented: $homeDataVM.isPresentPlayer) {
             VStack {
-                
+                let pri = print("pri \(UIDevice.current.orientation)")
+                let pri1 = print("pri2 \(deviceOrientation)")
 //                #if os(iOS)
-                if UIDevice.current.isIPhone {
+                if UIDevice.current.isIPhone && deviceOrientation.rawValue == 0 || deviceOrientation.rawValue == 1 {
                     Button {
                         homeDataVM.isPresentPlayer = false
                     } label: {
@@ -54,6 +66,7 @@ struct TabItemsView: View {
                             .cornerRadius(20)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding([.top, .leading], 15)
                 }
 //                #endif
                 VideoPlayerView()
