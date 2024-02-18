@@ -22,10 +22,6 @@ extension UIDevice {
         UIDevice.current.userInterfaceIdiom == .tv
     }
     
-    var isLandscape: Bool {
-        UIDevice.current.orientation.isLandscape
-    }
-    
     var haveNotch: Bool {
         let bottom = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
                 return bottom > 0

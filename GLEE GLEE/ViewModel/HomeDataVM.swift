@@ -81,8 +81,9 @@ class HomeDataVM: ObservableObject {
             Movie(id: 0, title: "", thumbnail: "choori", backgroundImage: ""),
             Movie(id: 0, title: "", thumbnail: "dugdugi", backgroundImage: ""),
             Movie(id: 0, title: "", thumbnail: "happy_ending", backgroundImage: ""),
-            Movie(id: 0, title: "", thumbnail: "matrix", backgroundImage: ""),
-            Movie(id: 0, title: "", thumbnail: "morbius", backgroundImage: "")
+            Movie(id: 0, title: "", thumbnail: "matrix", backgroundImage: ""),Movie(id: 0, title: "", thumbnail: "choori", backgroundImage: ""),
+            Movie(id: 0, title: "", thumbnail: "morbius", backgroundImage: ""),
+            Movie(id: 0, title: "", thumbnail: "beiman_pitega", backgroundImage: ""),Movie(id: 0, title: "", thumbnail: "happy_ending", backgroundImage: ""),Movie(id: 0, title: "", thumbnail: "beiman_pitega", backgroundImage: "")
         ]
     )
     @Published var isPresentPlayer = false
