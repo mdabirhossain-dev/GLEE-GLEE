@@ -73,6 +73,7 @@
 		105EC0922B822685004D6E0E /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105EC04F2B822684004D6E0E /* HistoryView.swift */; };
 		105EC0932B822685004D6E0E /* ProfileAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105EC0512B822684004D6E0E /* ProfileAssets.xcassets */; };
 		105EC0942B822685004D6E0E /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105EC0532B822684004D6E0E /* DateFormatter.swift */; };
+		105EC0962B82290D004D6E0E /* UIColors + Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105EC0952B82290D004D6E0E /* UIColors + Additions.swift */; };
 		107C4C1C2B7E21F70076A0F0 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4C1B2B7E21F70076A0F0 /* MoviesView.swift */; };
 		107C4C1F2B7E2A4D0076A0F0 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4C1E2B7E2A4D0076A0F0 /* RoundedCorners.swift */; };
 		10B7525D2B7C875C00C8FE9F /* GLEE_GLEEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B7525C2B7C875C00C8FE9F /* GLEE_GLEEApp.swift */; };
@@ -163,6 +164,7 @@
 		105EC04F2B822684004D6E0E /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		105EC0512B822684004D6E0E /* ProfileAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ProfileAssets.xcassets; sourceTree = "<group>"; };
 		105EC0532B822684004D6E0E /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		105EC0952B82290D004D6E0E /* UIColors + Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColors + Additions.swift"; sourceTree = "<group>"; };
 		107C4C1B2B7E21F70076A0F0 /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		107C4C1E2B7E2A4D0076A0F0 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		10B752592B7C875C00C8FE9F /* GLEE GLEE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GLEE GLEE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -589,6 +591,7 @@
 			isa = PBXGroup;
 			children = (
 				10B752942B7CDB0000C8FE9F /* UIDevice.swift */,
+				105EC0952B82290D004D6E0E /* UIColors + Additions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				107C4C1C2B7E21F70076A0F0 /* MoviesView.swift in Sources */,
 				105EC0902B822685004D6E0E /* ProgressView.swift in Sources */,
 				10B7527F2B7C880600C8FE9F /* CaroselView.swift in Sources */,
+				105EC0962B82290D004D6E0E /* UIColors + Additions.swift in Sources */,
 				105EC0652B822685004D6E0E /* FontManager.swift in Sources */,
 				105EC08D2B822685004D6E0E /* SupportView.swift in Sources */,
 				105EC05C2B822685004D6E0E /* ProfilePicture.swift in Sources */,

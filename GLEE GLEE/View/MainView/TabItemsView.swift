@@ -39,7 +39,7 @@ struct TabItemsView: View {
                     Label("Explore", systemImage: "globe.desk")
                 }
             
-            MyChannelView()
+            ProfileView()
                 .tabItem {
                     Label("My Channel", systemImage: "person.crop.square")
                 }

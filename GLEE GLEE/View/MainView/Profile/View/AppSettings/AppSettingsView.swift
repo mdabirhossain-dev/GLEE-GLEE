@@ -145,9 +145,9 @@ struct AppSettingsView: View {
         .onTapGesture(perform: {
             hideKeyboard()
         })
-        .onAppear{
-            isDark = UserDefaultsManager.shared.getString(forkey: UserDefaultKeys.appAppearance.rawValue) == UserDefaultKeys.dark.rawValue ? true : false
-        }
+//        .onAppear{
+//            isDark = UserDefaultsManager.shared.getString(forkey: UserDefaultKeys.appAppearance.rawValue) == UserDefaultKeys.dark.rawValue ? true : false
+//        }
     }
 }
 
