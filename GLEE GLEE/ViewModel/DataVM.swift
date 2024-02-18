@@ -1,5 +1,5 @@
 //
-//  HomeDataVM.swift
+//  DataVM.swift
 //  Multiplatform Stream
 //
 //  Created by Md Abir Hossain on 13/2/24.
@@ -8,9 +8,9 @@
 import Foundation
 
 
-class HomeDataVM: ObservableObject {
+class DataVM: ObservableObject {
     
-    static let shared = HomeDataVM()
+    static let shared = DataVM()
     
     @Published var homeData = HomeDataModel(
         carosel: [
@@ -86,6 +86,56 @@ class HomeDataVM: ObservableObject {
             Movie(id: 0, title: "", thumbnail: "beiman_pitega", backgroundImage: ""),Movie(id: 0, title: "", thumbnail: "happy_ending", backgroundImage: ""),Movie(id: 0, title: "", thumbnail: "beiman_pitega", backgroundImage: "")
         ]
     )
+    
+    @Published var tvChannelData = LiveTVDataModel(
+        sperts: TVDataModel(title: "Sports", tvModel: [
+            TVModel(id: 0, title: "Ligue 1", thumbnail: "ligue_1", backgroundImage: ""),
+            TVModel(id: 1, title: "Sony Sports 1", thumbnail: "sony_sports_1", backgroundImage: ""),
+            TVModel(id: 2, title: "Sony Sports 2", thumbnail: "sony_sports_2", backgroundImage: ""),
+            TVModel(id: 3, title: "Sony Sports 3", thumbnail: "sony_sports_3", backgroundImage: ""),
+            TVModel(id: 4, title: "Sony Sports 5", thumbnail: "sony_sports_5", backgroundImage: "")
+        ]),
+        news: TVDataModel(title: "News", tvModel: [
+            TVModel(id: 0, title: "Al jazeera", thumbnail: "al_jazeera", backgroundImage: ""),
+            TVModel(id: 1, title: "ATN Bangla 1", thumbnail: "atn_bangla 1", backgroundImage: ""),
+            TVModel(id: 2, title: "ATN Bangla", thumbnail: "atn_bangla", backgroundImage: ""),
+            TVModel(id: 3, title: "Bangla Vision", thumbnail: "bangla_vision", backgroundImage: ""),
+            TVModel(id: 5, title: "Desh TV", thumbnail: "desh_tv", backgroundImage: ""),
+            TVModel(id: 6, title: "DW", thumbnail: "dw", backgroundImage: ""),
+            TVModel(id: 7, title: "Euro News", thumbnail: "euro_news", backgroundImage: ""),
+            TVModel(id: 8, title: "Jamuna TV", thumbnail: "jamuna_tv", backgroundImage: ""),
+            TVModel(id: 9, title: "Nagorik", thumbnail: "nagorik", backgroundImage: ""),
+            TVModel(id: 10, title: "News 24", thumbnail: "news_24", backgroundImage: ""),
+            TVModel(id: 11, title: "Ruposhi Bangla", thumbnail: "ruposhi_bangla", backgroundImage: "")
+        ]),
+        entertainment: TVDataModel(title: "Entertainment", tvModel: [
+            TVModel(id: 0, title: "Euro News", thumbnail: "euro_news", backgroundImage: ""),
+            TVModel(id: 1, title: "Al jazeera", thumbnail: "al_jazeera", backgroundImage: ""),
+            TVModel(id: 2, title: "Ruposhi Bangla", thumbnail: "ruposhi_bangla", backgroundImage: ""),
+            TVModel(id: 3, title: "ATN Bangla", thumbnail: "atn_bangla", backgroundImage: ""),
+            TVModel(id: 4, title: "Nagorik", thumbnail: "nagorik", backgroundImage: ""),
+            TVModel(id: 5, title: "Bangla Vision", thumbnail: "bangla_vision", backgroundImage: ""),
+            TVModel(id: 6, title: "Jamuna TV", thumbnail: "jamuna_tv", backgroundImage: ""),
+            TVModel(id: 7, title: "Boisakhi TV", thumbnail: "boisakhi_tv", backgroundImage: ""),
+            TVModel(id: 8, title: "Desh TV", thumbnail: "desh_tv", backgroundImage: ""),
+            TVModel(id: 9, title: "DW", thumbnail: "dw", backgroundImage: "")
+        ]),
+        localTV: TVDataModel(title: "Local TV", tvModel: [
+            TVModel(id: 0, title: "ATN Bangla", thumbnail: "atn_bangla", backgroundImage: ""),
+            TVModel(id: 1, title: "Euro News", thumbnail: "euro_news", backgroundImage: ""),
+            TVModel(id: 2, title: "ATN Bangla 1", thumbnail: "atn_bangla 1", backgroundImage: ""),
+            TVModel(id: 3, title: "Boisakhi TV", thumbnail: "boisakhi_tv", backgroundImage: ""),
+            TVModel(id: 4, title: "Desh TV", thumbnail: "desh_tv", backgroundImage: ""),
+            TVModel(id: 5, title: "Jamuna TV", thumbnail: "jamuna_tv", backgroundImage: ""),
+            TVModel(id: 6, title: "DW", thumbnail: "dw", backgroundImage: ""),
+            TVModel(id: 7, title: "Nagorik", thumbnail: "nagorik", backgroundImage: ""),
+            TVModel(id: 8, title: "Bangla Vision", thumbnail: "bangla_vision", backgroundImage: ""),
+            TVModel(id: 9, title: "News 24", thumbnail: "news_24", backgroundImage: ""),
+            TVModel(id: 10, title: "Al jazeera", thumbnail: "al_jazeera", backgroundImage: ""),
+            TVModel(id: 11, title: "Ruposhi Bangla", thumbnail: "ruposhi_bangla", backgroundImage: "")
+        ])
+    )
+    
     @Published var isPresentPlayer = false
     @Published var videoURL = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     

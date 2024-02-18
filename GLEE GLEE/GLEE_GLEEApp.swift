@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct GLEE_GLEEApp: App {
     // MARK: - Properties
-    @StateObject var homeDataVM = HomeDataVM()
+    @StateObject var homeDataVM = DataVM()
     
     var body: some Scene {
         WindowGroup {

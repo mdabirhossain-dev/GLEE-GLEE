@@ -12,7 +12,7 @@ struct MoviesView: View {
     let movies: [Movie]
     let size: CGSize
     
-    @EnvironmentObject var homeDataVM: HomeDataVM
+    @EnvironmentObject var homeDataVM: DataVM
     
     var body: some View {
         Text("Hindi Movies")

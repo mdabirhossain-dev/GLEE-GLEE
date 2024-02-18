@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabItemsView: View {
     // MARK: - Propoerties
-    @EnvironmentObject var homeDataVM: HomeDataVM
+    @EnvironmentObject var homeDataVM: DataVM
     
     // Device orientation
     #if os(iOS)

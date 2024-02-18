@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		105EBFF02B81D2EE004D6E0E /* LiveTVDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105EBFEF2B81D2EE004D6E0E /* LiveTVDataModel.swift */; };
 		107C4C1C2B7E21F70076A0F0 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4C1B2B7E21F70076A0F0 /* MoviesView.swift */; };
 		107C4C1F2B7E2A4D0076A0F0 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4C1E2B7E2A4D0076A0F0 /* RoundedCorners.swift */; };
 		10B7525D2B7C875C00C8FE9F /* GLEE_GLEEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B7525C2B7C875C00C8FE9F /* GLEE_GLEEApp.swift */; };
@@ -19,7 +20,7 @@
 		10B7527E2B7C880600C8FE9F /* TrendingChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752722B7C880600C8FE9F /* TrendingChannelsView.swift */; };
 		10B7527F2B7C880600C8FE9F /* CaroselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752732B7C880600C8FE9F /* CaroselView.swift */; };
 		10B752802B7C880600C8FE9F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752752B7C880600C8FE9F /* HomeView.swift */; };
-		10B752812B7C880600C8FE9F /* HomeDataVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752772B7C880600C8FE9F /* HomeDataVM.swift */; };
+		10B752812B7C880600C8FE9F /* DataVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752772B7C880600C8FE9F /* DataVM.swift */; };
 		10B752822B7C880600C8FE9F /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752792B7C880600C8FE9F /* HomeDataModel.swift */; };
 		10B752842B7C8BDA00C8FE9F /* TabItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752832B7C8BDA00C8FE9F /* TabItemsView.swift */; };
 		10B752862B7C8D7200C8FE9F /* TVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B752852B7C8D7200C8FE9F /* TVView.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		105EBFEF2B81D2EE004D6E0E /* LiveTVDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTVDataModel.swift; sourceTree = "<group>"; };
 		107C4C1B2B7E21F70076A0F0 /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		107C4C1E2B7E2A4D0076A0F0 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		10B752592B7C875C00C8FE9F /* GLEE GLEE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GLEE GLEE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +48,7 @@
 		10B752722B7C880600C8FE9F /* TrendingChannelsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingChannelsView.swift; sourceTree = "<group>"; };
 		10B752732B7C880600C8FE9F /* CaroselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaroselView.swift; sourceTree = "<group>"; };
 		10B752752B7C880600C8FE9F /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		10B752772B7C880600C8FE9F /* HomeDataVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataVM.swift; sourceTree = "<group>"; };
+		10B752772B7C880600C8FE9F /* DataVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataVM.swift; sourceTree = "<group>"; };
 		10B752792B7C880600C8FE9F /* HomeDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
 		10B752832B7C8BDA00C8FE9F /* TabItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemsView.swift; sourceTree = "<group>"; };
 		10B752852B7C8D7200C8FE9F /* TVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVView.swift; sourceTree = "<group>"; };
@@ -162,7 +164,7 @@
 		10B752762B7C880600C8FE9F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				10B752772B7C880600C8FE9F /* HomeDataVM.swift */,
+				10B752772B7C880600C8FE9F /* DataVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				10B752792B7C880600C8FE9F /* HomeDataModel.swift */,
+				105EBFEF2B81D2EE004D6E0E /* LiveTVDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				107C4C1C2B7E21F70076A0F0 /* MoviesView.swift in Sources */,
 				10B7527F2B7C880600C8FE9F /* CaroselView.swift in Sources */,
 				10B7525F2B7C875C00C8FE9F /* ContentView.swift in Sources */,
+				105EBFF02B81D2EE004D6E0E /* LiveTVDataModel.swift in Sources */,
 				10B7527E2B7C880600C8FE9F /* TrendingChannelsView.swift in Sources */,
 				10B752822B7C880600C8FE9F /* HomeDataModel.swift in Sources */,
 				10B752932B7CC2B700C8FE9F /* EditorsChoiceView.swift in Sources */,
@@ -285,7 +289,7 @@
 				10B752882B7C8D7F00C8FE9F /* UploadView.swift in Sources */,
 				10B7528C2B7C8DA000C8FE9F /* MyChannelView.swift in Sources */,
 				10B7525D2B7C875C00C8FE9F /* GLEE_GLEEApp.swift in Sources */,
-				10B752812B7C880600C8FE9F /* HomeDataVM.swift in Sources */,
+				10B752812B7C880600C8FE9F /* DataVM.swift in Sources */,
 				10B752902B7C9AAA00C8FE9F /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

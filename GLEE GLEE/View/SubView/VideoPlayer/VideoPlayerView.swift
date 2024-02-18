@@ -10,7 +10,7 @@ import AVKit
 
 struct VideoPlayerView: View {
     // MARK: - Properties
-    @EnvironmentObject var homeDataVM: HomeDataVM
+    @EnvironmentObject var homeDataVM: DataVM
     @State private var player = AVPlayer()
     let url = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     

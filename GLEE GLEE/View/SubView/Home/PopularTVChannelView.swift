@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PopularTVChannelView: View {
     // MARK: - Properties
-    @EnvironmentObject var homeDataVM: HomeDataVM
+    @EnvironmentObject var homeDataVM: DataVM
     
 //    var action: () -> Void
     

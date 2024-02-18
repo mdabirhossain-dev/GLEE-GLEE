@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditorsChoiceView: View {
     // MARK: - Properties
-    @EnvironmentObject var homeDataVM: HomeDataVM
+    @EnvironmentObject var homeDataVM: DataVM
     let editorsChoices: [EditorsChoice]
     
     @State private var isNavigate = false

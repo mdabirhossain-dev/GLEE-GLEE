@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     // MARK: - Properties
 //    @StateObject var homeDatxaVM = HomeDataVM.shared
-    @EnvironmentObject var homeDataVM: HomeDataVM
+    @EnvironmentObject var homeDataVM: DataVM
     
     let carosel: [Carosel] = [
         Carosel(id: 0, title: "", thumbnail: "dirilis", backgroundImage: ""),
