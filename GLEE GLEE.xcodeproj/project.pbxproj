@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1038B9A42B8322FE003CE91B /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B9A32B8322FE003CE91B /* Log.swift */; };
+		1038B9A62B832940003CE91B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B9A52B832940003CE91B /* Constants.swift */; };
+		1038B9B72B832BAC003CE91B /* RemoveWhitespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B9A92B832BAC003CE91B /* RemoveWhitespace.swift */; };
+		1038B9B82B832BAC003CE91B /* RecordPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B9AA2B832BAC003CE91B /* RecordPermission.swift */; };
+		1038B9B92B832BAC003CE91B /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B9AC2B832BAC003CE91B /* SpeechRecognition.swift */; };
+		1038B9BA2B832BAC003CE91B /* ShowInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B9AE2B832BAC003CE91B /* ShowInfos.swift */; };
+		1038B9BB2B832BAC003CE91B /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B9B12B832BAC003CE91B /* SearchResultView.swift */; };
+		1038B9BC2B832BAC003CE91B /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B9B22B832BAC003CE91B /* Search.swift */; };
+		1038B9BD2B832BAC003CE91B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1038B9B42B832BAC003CE91B /* SearchView.swift */; };
+		1038B9BE2B832BAC003CE91B /* SearchAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1038B9B62B832BAC003CE91B /* SearchAssets.xcassets */; };
 		105EBFF02B81D2EE004D6E0E /* LiveTVDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105EBFEF2B81D2EE004D6E0E /* LiveTVDataModel.swift */; };
 		105EC0542B822685004D6E0E /* DummyDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105EBFF32B822684004D6E0E /* DummyDatas.swift */; };
 		105EC0552B822685004D6E0E /* GeoLocations.json in Resources */ = {isa = PBXBuildFile; fileRef = 105EBFF42B822684004D6E0E /* GeoLocations.json */; };
@@ -98,6 +108,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1038B9A32B8322FE003CE91B /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		1038B9A52B832940003CE91B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1038B9A92B832BAC003CE91B /* RemoveWhitespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveWhitespace.swift; sourceTree = "<group>"; };
+		1038B9AA2B832BAC003CE91B /* RecordPermission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordPermission.swift; sourceTree = "<group>"; };
+		1038B9AC2B832BAC003CE91B /* SpeechRecognition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognition.swift; sourceTree = "<group>"; };
+		1038B9AE2B832BAC003CE91B /* ShowInfos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowInfos.swift; sourceTree = "<group>"; };
+		1038B9B12B832BAC003CE91B /* SearchResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
+		1038B9B22B832BAC003CE91B /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		1038B9B42B832BAC003CE91B /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		1038B9B62B832BAC003CE91B /* SearchAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SearchAssets.xcassets; sourceTree = "<group>"; };
 		105EBFEF2B81D2EE004D6E0E /* LiveTVDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTVDataModel.swift; sourceTree = "<group>"; };
 		105EBFF32B822684004D6E0E /* DummyDatas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyDatas.swift; sourceTree = "<group>"; };
 		105EBFF42B822684004D6E0E /* GeoLocations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GeoLocations.json; sourceTree = "<group>"; };
@@ -202,6 +222,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1038B9A22B8322B5003CE91B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1038B9A32B8322FE003CE91B /* Log.swift */,
+				1038B9A52B832940003CE91B /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1038B9A72B832BAC003CE91B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1038B9A82B832BAC003CE91B /* Extension */,
+				1038B9AB2B832BAC003CE91B /* SpeechRecognition */,
+				1038B9AD2B832BAC003CE91B /* Model */,
+				1038B9AF2B832BAC003CE91B /* Views */,
+				1038B9B52B832BAC003CE91B /* Assets */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		1038B9A82B832BAC003CE91B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1038B9A92B832BAC003CE91B /* RemoveWhitespace.swift */,
+				1038B9AA2B832BAC003CE91B /* RecordPermission.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1038B9AB2B832BAC003CE91B /* SpeechRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				1038B9AC2B832BAC003CE91B /* SpeechRecognition.swift */,
+			);
+			path = SpeechRecognition;
+			sourceTree = "<group>";
+		};
+		1038B9AD2B832BAC003CE91B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1038B9AE2B832BAC003CE91B /* ShowInfos.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1038B9AF2B832BAC003CE91B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1038B9B02B832BAC003CE91B /* SubView */,
+				1038B9B32B832BAC003CE91B /* MainView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1038B9B02B832BAC003CE91B /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				1038B9B12B832BAC003CE91B /* SearchResultView.swift */,
+				1038B9B22B832BAC003CE91B /* Search.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		1038B9B32B832BAC003CE91B /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				1038B9B42B832BAC003CE91B /* SearchView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		1038B9B52B832BAC003CE91B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1038B9B62B832BAC003CE91B /* SearchAssets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		105EBFF12B822684004D6E0E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -566,6 +666,7 @@
 			isa = PBXGroup;
 			children = (
 				10B752912B7C9E4D00C8FE9F /* GLEE-GLEE-Info.plist */,
+				1038B9A22B8322B5003CE91B /* Helpers */,
 				10B7526B2B7C880600C8FE9F /* Extension */,
 				10B752782B7C880600C8FE9F /* Model */,
 				10B7526D2B7C880600C8FE9F /* View */,
@@ -624,6 +725,7 @@
 				10B752872B7C8D7F00C8FE9F /* UploadView.swift */,
 				10B752892B7C8D8E00C8FE9F /* ExploreView.swift */,
 				105EBFF12B822684004D6E0E /* Profile */,
+				1038B9A72B832BAC003CE91B /* Search */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -728,6 +830,7 @@
 				105EC0552B822685004D6E0E /* GeoLocations.json in Resources */,
 				10B752652B7C875D00C8FE9F /* Preview Assets.xcassets in Resources */,
 				105EC0932B822685004D6E0E /* ProfileAssets.xcassets in Resources */,
+				1038B9BE2B832BAC003CE91B /* SearchAssets.xcassets in Resources */,
 				10B752612B7C875D00C8FE9F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -752,6 +855,7 @@
 				105EC05F2B822685004D6E0E /* ScreenSize.swift in Sources */,
 				105EC0712B822685004D6E0E /* ZoomableScrollView.swift in Sources */,
 				105EC0612B822685004D6E0E /* DeviceType.swift in Sources */,
+				1038B9B72B832BAC003CE91B /* RemoveWhitespace.swift in Sources */,
 				105EC0642B822685004D6E0E /* UserLocation.swift in Sources */,
 				10B752802B7C880600C8FE9F /* HomeView.swift in Sources */,
 				105EC08F2B822685004D6E0E /* HistoryViewModel.swift in Sources */,
@@ -768,8 +872,10 @@
 				105EC0562B822685004D6E0E /* Country.swift in Sources */,
 				10B7525F2B7C875C00C8FE9F /* ContentView.swift in Sources */,
 				105EBFF02B81D2EE004D6E0E /* LiveTVDataModel.swift in Sources */,
+				1038B9BA2B832BAC003CE91B /* ShowInfos.swift in Sources */,
 				105EC0862B822685004D6E0E /* ParentalControlRedButton.swift in Sources */,
 				105EC0732B822685004D6E0E /* ProfileCustomAlert.swift in Sources */,
+				1038B9B92B832BAC003CE91B /* SpeechRecognition.swift in Sources */,
 				105EC0672B822685004D6E0E /* UserData.swift in Sources */,
 				10B7527E2B7C880600C8FE9F /* TrendingChannelsView.swift in Sources */,
 				105EC0772B822685004D6E0E /* LargeTextFieldModifier.swift in Sources */,
@@ -781,6 +887,8 @@
 				105EC06E2B822685004D6E0E /* CalenderView.swift in Sources */,
 				105EC0832B822685004D6E0E /* ParentalLockAndUnlockView.swift in Sources */,
 				10B7527D2B7C880600C8FE9F /* CategoriesView.swift in Sources */,
+				1038B9A42B8322FE003CE91B /* Log.swift in Sources */,
+				1038B9BD2B832BAC003CE91B /* SearchView.swift in Sources */,
 				10B7527B2B7C880600C8FE9F /* PopularTVChannelView.swift in Sources */,
 				105EC06F2B822685004D6E0E /* ImagePickerView.swift in Sources */,
 				105EC0752B822685004D6E0E /* MultilineTextField.swift in Sources */,
@@ -789,11 +897,14 @@
 				105EC0632B822685004D6E0E /* ConditionalSearchNotificationView.swift in Sources */,
 				105EC0762B822685004D6E0E /* TextFieldView.swift in Sources */,
 				105EC07E2B822685004D6E0E /* NoDataFoundView.swift in Sources */,
+				1038B9A62B832940003CE91B /* Constants.swift in Sources */,
 				105EC0852B822685004D6E0E /* ParentalUnlockViews.swift in Sources */,
 				10B7527C2B7C880600C8FE9F /* TidBitsView.swift in Sources */,
 				105EC0602B822685004D6E0E /* HideKeyboard.swift in Sources */,
 				105EC0822B822685004D6E0E /* TextFieldPlaceholderStyle.swift in Sources */,
+				1038B9B82B832BAC003CE91B /* RecordPermission.swift in Sources */,
 				105EC08A2B822685004D6E0E /* ProfileOptionView.swift in Sources */,
+				1038B9BC2B832BAC003CE91B /* Search.swift in Sources */,
 				10B752882B7C8D7F00C8FE9F /* UploadView.swift in Sources */,
 				105EC08E2B822685004D6E0E /* AppSettingsView.swift in Sources */,
 				105EC07D2B822685004D6E0E /* PlaceholderWithCustomColorExtension.swift in Sources */,
@@ -811,6 +922,7 @@
 				105EC07F2B822685004D6E0E /* MovieRequestView.swift in Sources */,
 				105EC0802B822685004D6E0E /* TextFieldWhiteBorderedView.swift in Sources */,
 				105EC0662B822685004D6E0E /* HistoryDataModel.swift in Sources */,
+				1038B9BB2B832BAC003CE91B /* SearchResultView.swift in Sources */,
 				105EC0892B822685004D6E0E /* StepGradientView.swift in Sources */,
 				10B7525D2B7C875C00C8FE9F /* GLEE_GLEEApp.swift in Sources */,
 				105EC0792B822685004D6E0E /* NavigationBar.swift in Sources */,
