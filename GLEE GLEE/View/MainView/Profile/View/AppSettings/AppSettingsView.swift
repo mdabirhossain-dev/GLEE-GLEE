@@ -117,6 +117,11 @@ struct AppSettingsView: View {
                                 .cornerRadius(39)
                             }
                             .foregroundColor(.white)
+                            
+                            Circle()
+                                .fill(Color.buttonBackground)
+                                .frame(width: 40, height: 40)
+                            
                         }.padding(.top, 30)
                         HStack {
                             CustomToggleButton(isToggle: $isDark)

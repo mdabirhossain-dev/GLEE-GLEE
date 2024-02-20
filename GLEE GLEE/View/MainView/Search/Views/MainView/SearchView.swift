@@ -39,13 +39,13 @@ struct SearchView: View {
         }
     }
     
-    private func setupCustomPlayer() {
-        guard let url = NSURL(string: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8") else { return }
-        let viewController = PlayerDetailViewController.instantiate()
-        viewController.viewModel = .init(isTv: false, currentVideoURL: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8")
-        CustomPlayer.initCustomPlayer(url: url)
-        CustomPlayer.showCustomPlayerView(viewController: viewController)
-    }
+//    private func setupCustomPlayer() {
+//        guard let url = NSURL(string: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8") else { return }
+//        let viewController = PlayerDetailViewController.instantiate()
+//        viewController.viewModel = .init(isTv: false, currentVideoURL: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8")
+//        CustomPlayer.initCustomPlayer(url: url)
+//        CustomPlayer.showCustomPlayerView(viewController: viewController)
+//    }
     
     //MARK: - Check Authorization Status
     
@@ -99,23 +99,23 @@ struct SearchView: View {
                                 LazyVGrid(columns: columns, spacing: 5) {
                                     ForEach(0 ..< recommendedShows.count, id: \.self) { index in
                                         SearchResultView(showInfo: recommendedShows[index], height: geo.size.width / 2)
-                                            .onTapGesture(perform: {
-                                                Log.info("Top Searches index \(index)")
-                                                hideKeyboard()
-                                                
-                                                if CustomPlayer.getPlayerViewController() != nil {
-                                                    guard let url = NSURL(string: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8") else { return }
-                                                    CustomPlayer.changeURL(url: url)
-                                                    CustomPlayer.expandView(expand: true)
-                                                } else {
-                                                    setupCustomPlayer()
-                                                }
-                                                hideKeyboard()
-                                                let vc = PlayerDetailViewController.instantiate()
-                                                vc.viewModel = .init(isTv: false, currentVideoURL: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8")
-                                                CustomPlayer.isLive(isLive: false)
-                                                CustomPlayer.add_ViewController(viewController: vc)
-                                            })
+//                                            .onTapGesture(perform: {
+//                                                Log.info("Top Searches index \(index)")
+//                                                hideKeyboard()
+//                                                
+//                                                if CustomPlayer.getPlayerViewController() != nil {
+//                                                    guard let url = NSURL(string: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8") else { return }
+//                                                    CustomPlayer.changeURL(url: url)
+//                                                    CustomPlayer.expandView(expand: true)
+//                                                } else {
+//                                                    setupCustomPlayer()
+//                                                }
+//                                                hideKeyboard()
+//                                                let vc = PlayerDetailViewController.instantiate()
+//                                                vc.viewModel = .init(isTv: false, currentVideoURL: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8")
+//                                                CustomPlayer.isLive(isLive: false)
+//                                                CustomPlayer.add_ViewController(viewController: vc)
+//                                            })
                                     }
                                 }
                             }
@@ -130,21 +130,21 @@ struct SearchView: View {
                                 LazyVGrid(columns: columns, spacing: 5) {
                                     ForEach(0 ..< filterShows.count, id: \.self) { index in
                                         SearchResultView(showInfo: filterShows[index], height: geo.size.width / 2)
-                                            .onTapGesture(perform: {
-                                                Log.info("Result index \(index)")
-                                                if CustomPlayer.getPlayerViewController() != nil {
-                                                    guard let url = NSURL(string: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8") else { return }
-                                                    CustomPlayer.changeURL(url: url)
-                                                    CustomPlayer.expandView(expand: true)
-                                                } else {
-                                                    setupCustomPlayer()
-                                                }
-                                                hideKeyboard()
-                                                let vc = PlayerDetailViewController.instantiate()
-                                                vc.viewModel = .init(isTv: false, currentVideoURL: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8")
-                                                CustomPlayer.isLive(isLive: false)
-                                                CustomPlayer.add_ViewController(viewController: vc)
-                                            })
+//                                            .onTapGesture(perform: {
+//                                                Log.info("Result index \(index)")
+//                                                if CustomPlayer.getPlayerViewController() != nil {
+//                                                    guard let url = NSURL(string: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8") else { return }
+//                                                    CustomPlayer.changeURL(url: url)
+//                                                    CustomPlayer.expandView(expand: true)
+//                                                } else {
+//                                                    setupCustomPlayer()
+//                                                }
+//                                                hideKeyboard()
+//                                                let vc = PlayerDetailViewController.instantiate()
+//                                                vc.viewModel = .init(isTv: false, currentVideoURL: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8")
+//                                                CustomPlayer.isLive(isLive: false)
+//                                                CustomPlayer.add_ViewController(viewController: vc)
+//                                            })
                                     }
                                 }
                             } else {
@@ -167,23 +167,23 @@ struct SearchView: View {
                                         LazyVGrid(columns: columns, spacing: 5) {
                                             ForEach(0 ..< recommendedShows.count, id: \.self) { index in
                                                 SearchResultView(showInfo: recommendedShows[index], height: geo.size.width / 2)
-                                                    .onTapGesture(perform: {
-                                                        hideKeyboard()
-                                                        Log.info("Recommended Shows index \(index)")
-                                                        
-                                                        if CustomPlayer.getPlayerViewController() != nil {
-                                                            guard let url = NSURL(string: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8") else { return }
-                                                            CustomPlayer.changeURL(url: url)
-                                                            CustomPlayer.expandView(expand: true)
-                                                        } else {
-                                                            setupCustomPlayer()
-                                                        }
-                                                        hideKeyboard()
-                                                        let vc = PlayerDetailViewController.instantiate()
-                                                        vc.viewModel = .init(isTv: false, currentVideoURL: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8")
-                                                        CustomPlayer.isLive(isLive: false)
-                                                        CustomPlayer.add_ViewController(viewController: vc)
-                                                    })
+//                                                    .onTapGesture(perform: {
+//                                                        hideKeyboard()
+//                                                        Log.info("Recommended Shows index \(index)")
+//                                                        
+//                                                        if CustomPlayer.getPlayerViewController() != nil {
+//                                                            guard let url = NSURL(string: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8") else { return }
+//                                                            CustomPlayer.changeURL(url: url)
+//                                                            CustomPlayer.expandView(expand: true)
+//                                                        } else {
+//                                                            setupCustomPlayer()
+//                                                        }
+//                                                        hideKeyboard()
+//                                                        let vc = PlayerDetailViewController.instantiate()
+//                                                        vc.viewModel = .init(isTv: false, currentVideoURL: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8")
+//                                                        CustomPlayer.isLive(isLive: false)
+//                                                        CustomPlayer.add_ViewController(viewController: vc)
+//                                                    })
                                             }
                                         }
                                     }

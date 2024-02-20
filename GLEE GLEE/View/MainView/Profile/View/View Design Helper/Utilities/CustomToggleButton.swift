@@ -1,5 +1,5 @@
 //
-//  CustomToggleButton.swift
+//  CustomToggleButton.swiftt
 //  AmberIT
 //
 //  Created by Tanvir Rahman on 21/11/23.
@@ -9,6 +9,9 @@ import SwiftUI
 
 struct CustomToggleButton: View {
     // MARK: - Properties
+    // UI Mode
+    @Environment(\.colorScheme) var colorScheme
+    
     @Binding var isToggle: Bool
     // MARK: - Body
     var body: some View {

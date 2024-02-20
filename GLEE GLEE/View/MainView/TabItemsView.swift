@@ -44,6 +44,12 @@ struct TabItemsView: View {
                     Label("My Channel", systemImage: "person.crop.square")
                 }
         }
+        .onAppear {
+            let appearance = UserDefaultsManager.shared.getString(forkey: UserDefaultKeys.appAppearance.rawValue)
+            UIApplication.shared.windows.forEach { window in
+                window.overrideUserInterfaceStyle = appearance == UserDefaultKeys.dark.rawValue ? .dark : .light
+            }
+        }
         #if os(iOS)
         .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
             if UIDevice.current.orientation.isLandscape {
