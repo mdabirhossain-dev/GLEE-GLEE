@@ -203,10 +203,12 @@ struct ProfileView: View {
                     
                     Spacer()
                 }
-            }.profileNavigationToolbar(title: "", isTitle: false, isSearch: true, isNotification: true)
+            }
+            .profileNavigationToolbar(title: "", isTitle: false, isSearch: true, isNotification: true)
                 .preferredColorScheme(.dark)
                 .navigationBarHidden(false)
                 .navigationBarBackButtonHidden(true)
+                .navigationBarTitleDisplayMode(.inline)
                 .background(
                     Color(UIColor.appPrimaryBackground ?? .systemBackground)
                         .ignoresSafeArea(.all)

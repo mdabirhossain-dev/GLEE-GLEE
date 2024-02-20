@@ -32,6 +32,7 @@ struct MoviesView: View {
                         Image(movies[index].thumbnail)
                             .resizable()
                             .frame(maxWidth: 0.3 * size.height, maxHeight: 0.25 * size.height)
+                            .cornerRadius(8)
                     }
                 }
             }
