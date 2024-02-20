@@ -9,6 +9,9 @@ import SwiftUI
 
 struct TabItemsView: View {
     // MARK: - Propoerties
+    // Dark mode storaage property
+    @AppStorage("isDark") private var isDark = false
+    
     @EnvironmentObject var homeDataVM: DataVM
     
     // Device orientation
@@ -44,12 +47,13 @@ struct TabItemsView: View {
                     Label("My Channel", systemImage: "person.crop.square")
                 }
         }
-        .onAppear {
-            let appearance = UserDefaultsManager.shared.getString(forkey: UserDefaultKeys.appAppearance.rawValue)
-            UIApplication.shared.windows.forEach { window in
-                window.overrideUserInterfaceStyle = appearance == UserDefaultKeys.dark.rawValue ? .dark : .light
-            }
-        }
+        .environment(\.colorScheme, isDark ? .dark : .light)
+//        .onAppear {
+//            let appearance = UserDefaultsManager.shared.getString(forkey: UserDefaultKeys.appAppearance.rawValue)
+//            UIApplication.shared.windows.forEach { window in
+//                window.overrideUserInterfaceStyle = appearance == UserDefaultKeys.dark.rawValue ? .dark : .light
+//            }
+//        }
         #if os(iOS)
         .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
             if UIDevice.current.orientation.isLandscape {

@@ -10,7 +10,7 @@ import SwiftUI
 struct AppSettingsView: View {
     // MARK: - Properties
     
- 
+    
     // Enter your Code
     @State private var enterCode: String = ""
     
@@ -38,6 +38,7 @@ struct AppSettingsView: View {
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .hideThisPartOfCode()
+                        
                         // QR Code
                         VStack {
                             Text("Scan QR code")
@@ -75,8 +76,9 @@ struct AppSettingsView: View {
                             .font(.custom(FontManager.Montserrat.light, size: 12))
                             .background(Color.appSettingButtonBackgroundGray)
                             .cornerRadius(39)
-                        }.hideThisPartOfCode()
-                  
+                        }
+                        .hideThisPartOfCode()
+                        
                         
                         // Data Saver Mode
                         VStack {
@@ -117,12 +119,9 @@ struct AppSettingsView: View {
                                 .cornerRadius(39)
                             }
                             .foregroundColor(.white)
-                            
-                            Circle()
-                                .fill(Color.buttonBackground)
-                                .frame(width: 40, height: 40)
-                            
-                        }.padding(.top, 30)
+                        }
+                        .padding(.top, 30)
+                        
                         HStack {
                             CustomToggleButton(isToggle: $isDark)
                             
@@ -141,7 +140,9 @@ struct AppSettingsView: View {
             }
             
             Spacer()
-        }.profileNavigationToolbar(title: "App Setting", isTitle: true, isSearch: true, isNotification: true)
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .profileNavigationToolbar(title: "App Setting", isTitle: true, isSearch: true, isNotification: true)
         .navigationBarHidden(false)
         .navigationBarBackButtonHidden(true)
         .background(

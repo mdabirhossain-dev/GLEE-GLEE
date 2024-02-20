@@ -125,12 +125,14 @@ final class KeyboardGuardian: ObservableObject {
         self.rects = Array<CGRect>(repeating: CGRect(), count: textFieldCount)
 
     }
-
+    
+    #if os(iOS)
     func addObserver() {
 NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyBoardDidHide(notification:)), name: UIResponder.keyboardDidHideNotification, object: nil)
 }
-
+    #endif
+    
 func removeObserver() {
  NotificationCenter.default.removeObserver(self)
 }

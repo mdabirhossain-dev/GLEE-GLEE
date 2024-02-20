@@ -71,7 +71,8 @@ struct MovieRequestView: View {
                 Text("Your Movie request is successfully sent \n Thank you for stay with us.")
                     .fontWeight(.bold)
             }
-        }.onTapGesture(perform: {
+        }
+        .onTapGesture(perform: {
             hideKeyboard()
         })
         .navigationBarHidden(false)
@@ -80,8 +81,8 @@ struct MovieRequestView: View {
         if !enterMovieName.isEmpty && !addDescriptionText.isEmpty {
             return false
         }
-        return true
         
+        return true
     }
 }
 
