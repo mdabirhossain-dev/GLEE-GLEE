@@ -42,10 +42,10 @@ struct TabItemsView: View {
                     Label("Explore", systemImage: "globe.desk")
                 }
             
-            ProfileView()
-                .tabItem {
-                    Label("My Channel", systemImage: "person.crop.square")
-                }
+//            ProfileView()
+//                .tabItem {
+//                    Label("My Channel", systemImage: "person.crop.square")
+//                }
         }
         .environment(\.colorScheme, isDark ? .dark : .light)
 //        .onAppear {
@@ -85,6 +85,7 @@ struct TabItemsView: View {
                     .padding([.top, .leading], 15)
                 }
                 #endif
+                
                 VideoPlayerView()
             }
             .ignoresSafeArea(.all)

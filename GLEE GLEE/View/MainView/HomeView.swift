@@ -22,28 +22,36 @@ struct HomeView: View {
     @State private var caroselIndex: Int = 0
     
     var body: some View {
-        GeometryReader { geo in
-            let size = geo.size
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack {
-                    CaroselView(carosel: homeDataVM.homeData.carosel, size: size)
-                    
-                    PopularTVChannelView(popularVTChannels: homeDataVM.homeData.popularTVChannel, size: size)
-                    
-                    MoviesView(movies: homeDataVM.homeData.movies, size: size)
-                    
-                    CategoriesView(categories: homeDataVM.homeData.categories)
-                    
-                    EditorsChoiceView(editorsChoices: homeDataVM.homeData.editorsChoice)
-                    
-                    TidBitsView(tidBits: homeDataVM.homeData.tidBits)
-                    
-                    TrendingChannelsView(trendingChannels: homeDataVM.homeData.trendingChannels)
+        NavigationStack {
+            VStack {
+                GeometryReader { geo in
+                    let size = geo.size
+                    ScrollView(.vertical, showsIndicators: false) {
+                        VStack {
+                            CaroselView(carosel: homeDataVM.homeData.carosel, size: size)
+                            
+                            PopularTVChannelView(popularVTChannels: homeDataVM.homeData.popularTVChannel, size: size)
+                            
+                            MoviesView(movies: homeDataVM.homeData.movies, size: size)
+                            
+                            CategoriesView(categories: homeDataVM.homeData.categories)
+                            
+                            EditorsChoiceView(editorsChoices: homeDataVM.homeData.editorsChoice)
+                            
+                            TidBitsView(tidBits: homeDataVM.homeData.tidBits)
+                            
+                            TrendingChannelsView(trendingChannels: homeDataVM.homeData.trendingChannels)
+                        }
+                        .frame(maxWidth: .infinity)
+                    }
+                    .background(Color.gray.opacity(0.3))
                 }
-                .frame(maxWidth: .infinity)
             }
-            .background(Color.gray.opacity(0.3))
         }
+        .profileNavigationToolbar(title: "Home", isTitle: true, isSearch: true, isNotification: true)
+        .navigationBarHidden(false)
+        .navigationBarBackButtonHidden(true)
+//        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
